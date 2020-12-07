@@ -1,4 +1,6 @@
 // ATtiny85 outputs
+#include "TinyBMP280.h"
+
 const int Red = 0;
 const int Green = 1;
 const int Blue = 4;
@@ -35,11 +37,12 @@ void SetColour (int colour, int intensity) {
 }  
 
 void loop() {
-  for (int i=-255; i <= 254; i++) {
-//    OCR0A = abs(i);
-//    OCR0B = 255-abs(i);
-    OCR1A = abs(i);
-//    OCR1B = 255-abs(i);
-    delay(10);
-  }
+//  for (int i=-255; i <= 254; i++) {
+////    OCR0A = abs(i);
+////    OCR0B = 255-abs(i);
+//    OCR1A = abs(i);
+////    OCR1B = 255-abs(i);
+//    delay(10);
+//  }
+  OCR1A = 127;
 }
