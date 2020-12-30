@@ -19,20 +19,22 @@ tbmp::TinyBMP280 bmp;
 
 void setup() {
     mySerial.begin(2400);
-    mySerial.println("BEGIN:");
     bmp.begin();
 }
 
 void loop() {
 
+  int temp = bmp.readIntTemperature();
   float t = bmp.readTemperature();
   float p = bmp.readPressure();
-//  float h = bmp.readAltitude(1027.0); // Replace this value for your current QNH
+  float h = bmp.readAltitude(1019.4); // Replace this value for your current QNH
 
   mySerial.print("T: "); mySerial.println(t);
   mySerial.print("P: "); mySerial.println(p/100);
-//  mySerial.print("H: "); mySerial.println(h);
+  mySerial.print("H: "); mySerial.println(h);
   mySerial.println("");
+
+//  mySerial.println("TEST!");
 
   delay(1000);
 

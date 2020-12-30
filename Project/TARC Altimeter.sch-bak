@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:TARC Altimeter-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -80,17 +79,6 @@ F 3 "~" H 3950 4900 50  0001 C CNN
 	1    3950 4900
 	1    0    0    -1  
 $EndComp
-$Comp
-L TARC_Altimeter:MagSpeaker SP1
-U 1 1 5CB29159
-P 3450 5350
-F 0 "SP1" H 3178 5551 50  0000 L CNN
-F 1 "MagSpeaker" H 3178 5460 50  0000 L CNN
-F 2 "TARC Altimeter:WT-1205" H 3250 5500 50  0001 C CNN
-F 3 "" H 3250 5500 50  0001 C CNN
-	1    3450 5350
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	3950 5150 3950 5050
 $Comp
@@ -113,28 +101,6 @@ F 1 "GND" H 7605 5377 50  0000 C CNN
 F 2 "" H 7600 5550 50  0001 C CNN
 F 3 "" H 7600 5550 50  0001 C CNN
 	1    7600 5550
-	1    0    0    -1  
-$EndComp
-$Comp
-L TARC_Altimeter:AP2210-3.3 U3
-U 1 1 5CB5BA2E
-P 6800 4500
-F 0 "U3" H 6825 5225 50  0000 C CNN
-F 1 "AP2210-3.3" H 6825 5134 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 6800 5200 50  0001 C CNN
-F 3 "" H 6800 5200 50  0001 C CNN
-	1    6800 4500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0107
-U 1 1 5CB5C4BA
-P 6800 4350
-F 0 "#PWR0107" H 6800 4100 50  0001 C CNN
-F 1 "GND" H 6805 4177 50  0000 C CNN
-F 2 "" H 6800 4350 50  0001 C CNN
-F 3 "" H 6800 4350 50  0001 C CNN
-	1    6800 4350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -194,12 +160,6 @@ F 3 "" H 5450 4150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7100 5250 7000 5250
-Wire Wire Line
-	7100 5150 7000 5150
-Text GLabel 7000 5150 0    50   Input ~ 0
-MOSI
-Wire Wire Line
-	7100 5050 7000 5050
 $Comp
 L Device:Q_NMOS_GSD Q1
 U 1 1 5CB81903
@@ -213,17 +173,6 @@ F 3 "~" H 3850 5650 50  0001 C CNN
 $EndComp
 Text GLabel 3650 5650 0    50   Input ~ 0
 VGS
-$Comp
-L TARC_Altimeter:A23_Socket U1
-U 1 1 5CB93965
-P 4000 4150
-F 0 "U1" H 3750 4200 50  0000 L CNN
-F 1 "A23_Socket" H 3450 4100 50  0000 L CNN
-F 2 "TARC Altimeter:A23_Socket" H 4000 4050 50  0001 C CNN
-F 3 "" H 4000 4050 50  0001 C CNN
-	1    4000 4150
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+12V #PWR0111
 U 1 1 5CB94018
@@ -321,8 +270,6 @@ Text GLabel 6150 5250 2    50   Input ~ 0
 SCLK
 Text GLabel 6150 5050 2    50   Input ~ 0
 MOSI
-Text GLabel 7000 5250 0    50   Input ~ 0
-MISO
 Wire Wire Line
 	6050 5050 6150 5050
 Wire Wire Line
@@ -407,8 +354,6 @@ F 3 "~" H 8150 5150 50  0001 C CNN
 	1    8150 5150
 	1    0    0    -1  
 $EndComp
-Text GLabel 7000 5050 0    50   Input ~ 0
-SCLK
 Text GLabel 6150 5150 2    50   Input ~ 0
 MISO
 Text GLabel 8350 5250 2    50   Input ~ 0
@@ -522,25 +467,6 @@ Wire Wire Line
 Connection ~ 7600 4850
 Wire Wire Line
 	3350 3850 3350 3950
-$Comp
-L Switch:SW_SPST J3
-U 1 1 5D45E1A8
-P 6400 5450
-F 0 "J3" H 6550 5550 50  0000 C CNN
-F 1 "CS Switch" H 6400 5350 50  0000 C CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical" H 6400 5450 50  0001 C CNN
-F 3 "~" H 6400 5450 50  0001 C CNN
-	1    6400 5450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 5450 6200 5450
-Wire Wire Line
-	6700 5350 7100 5350
-Wire Wire Line
-	6700 5350 6700 5450
-Wire Wire Line
-	6700 5450 6600 5450
 Wire Wire Line
 	6050 5550 6050 5650
 Wire Wire Line
@@ -575,4 +501,121 @@ F 3 "" H 8200 4100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8200 4050 8200 4100
+$Comp
+L power:GND #PWR0107
+U 1 1 5CB5C4BA
+P 6800 4350
+F 0 "#PWR0107" H 6800 4100 50  0001 C CNN
+F 1 "GND" H 6805 4177 50  0000 C CNN
+F 2 "" H 6800 4350 50  0001 C CNN
+F 3 "" H 6800 4350 50  0001 C CNN
+	1    6800 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 5250 7000 5550
+Wire Wire Line
+	7000 5550 7500 5550
+Connection ~ 7500 5550
+$Comp
+L TARC-Altimeter-rescue:A23_Socket-TARC_Altimeter U1
+U 1 1 5FED539E
+P 4000 4150
+F 0 "U1" H 4128 4254 50  0000 L CNN
+F 1 "A23_Socket-TARC_Altimeter" H 4128 4163 50  0000 L CNN
+F 2 "TARC_Altimeter:A23_Socket" H 4000 4050 50  0001 C CNN
+F 3 "" H 4000 4050 50  0001 C CNN
+	1    4000 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L TARC-Altimeter-rescue:MagSpeaker-TARC_Altimeter SP1
+U 1 1 5FED5B84
+P 3450 5050
+F 0 "SP1" H 3750 5100 50  0000 C CNN
+F 1 "MagSpeaker-TARC_Altimeter" H 3750 5250 50  0000 C CNN
+F 2 "TARC_Altimeter:WT-1205" H 3250 5200 50  0001 C CNN
+F 3 "" H 3250 5200 50  0001 C CNN
+	1    3450 5050
+	-1   0    0    1   
+$EndComp
+NoConn ~ 6050 5450
+$Comp
+L Device:R R3
+U 1 1 5FEE4847
+P 7000 4900
+F 0 "R3" H 7050 5000 50  0000 L CNN
+F 1 "10k" H 7050 4900 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6930 4900 50  0001 C CNN
+F 3 "~" H 7000 4900 50  0001 C CNN
+	1    7000 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5FEE3DD7
+P 6850 4850
+F 0 "R2" H 6700 4900 50  0000 L CNN
+F 1 "10k" H 6650 4800 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6780 4850 50  0001 C CNN
+F 3 "~" H 6850 4850 50  0001 C CNN
+	1    6850 4850
+	1    0    0    -1  
+$EndComp
+Connection ~ 7000 5050
+Wire Wire Line
+	6750 5050 7000 5050
+Wire Wire Line
+	6750 5150 6850 5150
+Wire Wire Line
+	6850 5000 6850 5150
+Connection ~ 6850 5150
+Wire Wire Line
+	7000 4700 7000 4750
+Wire Wire Line
+	7300 4700 7300 4850
+Connection ~ 7000 4700
+Connection ~ 7500 4850
+Wire Wire Line
+	7300 4850 7500 4850
+Wire Wire Line
+	6850 4700 7000 4700
+Text GLabel 6750 5150 0    50   Input ~ 0
+MOSI
+Text GLabel 6750 5050 0    50   Input ~ 0
+SCLK
+Wire Wire Line
+	7000 5050 7100 5050
+Wire Wire Line
+	6850 5150 7100 5150
+Wire Wire Line
+	7000 4700 7300 4700
+$Comp
+L power:+3V3 #PWR0122
+U 1 1 5FEFA896
+P 6800 5450
+F 0 "#PWR0122" H 6800 5300 50  0001 C CNN
+F 1 "+3V3" H 6815 5623 50  0000 C CNN
+F 2 "" H 6800 5450 50  0001 C CNN
+F 3 "" H 6800 5450 50  0001 C CNN
+	1    6800 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 5450 7100 5450
+Wire Wire Line
+	7100 5450 7100 5350
+Text Notes 5050 3550 0    50   ~ 0
+C2 and C3 -> U3 and U4
+$Comp
+L TARC-Altimeter-rescue:AP2210-3.3-TARC_Altimeter U3
+U 1 1 5FED6C3E
+P 6800 4500
+F 0 "U3" H 6825 5225 50  0000 C CNN
+F 1 "AP2210-3.3-TARC_Altimeter" H 6825 5134 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6800 5200 50  0001 C CNN
+F 3 "" H 6800 5200 50  0001 C CNN
+	1    6800 4500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
