@@ -521,8 +521,8 @@ $Comp
 L TARC-Altimeter-rescue:A23_Socket-TARC_Altimeter U1
 U 1 1 5FED539E
 P 4000 4150
-F 0 "U1" H 4128 4254 50  0000 L CNN
-F 1 "A23_Socket-TARC_Altimeter" H 4128 4163 50  0000 L CNN
+F 0 "U1" H 3750 4200 50  0000 L CNN
+F 1 "A23_Socket-TARC_Altimeter" H 2850 4100 50  0000 L CNN
 F 2 "TARC_Altimeter:A23_Socket" H 4000 4050 50  0001 C CNN
 F 3 "" H 4000 4050 50  0001 C CNN
 	1    4000 4150
@@ -606,7 +606,7 @@ Wire Wire Line
 Wire Wire Line
 	7100 5450 7100 5350
 Text Notes 5050 3550 0    50   ~ 0
-C2 and C3 -> U3 and U4
+C2 and C3->U3 and U4
 $Comp
 L TARC-Altimeter-rescue:AP2210-3.3-TARC_Altimeter U3
 U 1 1 5FED6C3E

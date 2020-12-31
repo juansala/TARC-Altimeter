@@ -232,17 +232,6 @@ F 3 "" H 7200 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCU_Microchip_ATtiny:ATtiny85-20SU U2
-U 1 1 5CB994CC
-P 5450 5350
-F 0 "U2" H 4920 5396 50  0000 R CNN
-F 1 "ATtiny85-20SU" H 4920 5305 50  0000 R CNN
-F 2 "Package_SO:SOIJ-8_5.3x5.3mm_P1.27mm" H 5450 5350 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 5450 5350 50  0001 C CNN
-	1    5450 5350
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0114
 U 1 1 5CB99CC0
 P 5450 5950
@@ -264,7 +253,7 @@ F 3 "" H 5450 4750 50  0001 C CNN
 	1    5450 4750
 	1    0    0    -1  
 $EndComp
-Text GLabel 6150 5350 2    50   Input ~ 0
+Text GLabel 6150 5450 2    50   Input ~ 0
 VGS
 Text GLabel 6150 5250 2    50   Input ~ 0
 SCLK
@@ -274,8 +263,6 @@ Wire Wire Line
 	6050 5050 6150 5050
 Wire Wire Line
 	6050 5150 6150 5150
-Wire Wire Line
-	6050 5350 6150 5350
 $Comp
 L power:GND #PWR0116
 U 1 1 5CBB8896
@@ -539,7 +526,6 @@ F 3 "" H 3250 5200 50  0001 C CNN
 	1    3450 5050
 	-1   0    0    1   
 $EndComp
-NoConn ~ 6050 5450
 $Comp
 L Device:R R3
 U 1 1 5FEE4847
@@ -618,4 +604,18 @@ F 3 "" H 6800 5200 50  0001 C CNN
 	1    6800 4500
 	1    0    0    -1  
 $EndComp
+$Comp
+L MCU_Microchip_ATtiny:ATtiny85-20SU U2
+U 1 1 5CB994CC
+P 5450 5350
+F 0 "U2" H 4920 5396 50  0000 R CNN
+F 1 "ATtiny85-20SU" H 4920 5305 50  0000 R CNN
+F 2 "Package_SO:SOIJ-8_5.3x5.3mm_P1.27mm" H 5450 5350 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 5450 5350 50  0001 C CNN
+	1    5450 5350
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6050 5350
+Wire Wire Line
+	6050 5450 6150 5450
 $EndSCHEMATC
